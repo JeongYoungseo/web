@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MainPage</title>
+    <style>
+        *{ margin: 0; 
+            padding: 0; 
+            box-sizing: border-box;
+        }
+        body{ 
+            font-family: Arial,sans-serif;
+        }
+        a{ 
+            text-decoration: none; 
+            color: black;
+        }
+        ul{ 
+            list-style: none;
+        }
+
+        header{    
+            background-color: white;
+            padding: 40px 20px 20px 20px;
+            text-align: center;
+        }
+        .logo{
+        width: 160px; 
+        height: 100px;
+        background-color:antiquewhite; 
+        margin: 0 auto; 
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        .right-menu{
+            display: flex;
+            justify-self: flex-end;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            padding-right: 20px;
+        }
+        .right-menu img{
+            vertical-align: middle;
+        }
+        nav{
+            background-color: bisque;
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        nav ul li{
+            position: relative;
+        }
+        nav ul li a{
+            padding: 14px 20px;
+            display: block;
+        }
+        nav ul li:hover{
+            background-color: #555;
+        }
+           nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 48px;
+      left: 0;
+      background: #444;
+      min-width: 160px;
+      flex-direction: column;
+      z-index: 1;
+    }
+
+    nav ul li:hover ul {
+      display: flex;
+    }
+
+    .section-title {
+      margin: 30px 0 10px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .product-grid {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .product {
+      width: 200px;
+
+      text-align: center;
+    }
+
+    .product img {
+      width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+    }
+
+    footer {
+      margin-top: 50px;
+      background: #f1f1f1;
+      text-align: center;
+      padding: 20px;
+    } 
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Shop</h1>
+        </div>
+        <div class="right-menu">
+        <a href="login.html"><img src="imgs/icons8-login-48.png" alt="로그인" width="20"></a>&nbsp;
+        <a href="cart.html"><img src="imgs/icons8-cart-24.png" alt="장바구니" width="20"></a>&nbsp;
+        <a href="mypage.html"><img src="imgs/icons8-user-24.png" alt="마이페이지" width="20"></a>&nbsp;      
+    </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Outer</a>
+                <ul>
+                    <li><a href="#">패딩/코트</a></li>
+                    <li><a href="#">가디건/자켓</a></li>
+                </ul>
+            </li>
+             <li><a href="#">Top</a>
+                <ul>
+                    <li><a href="#">티셔츠</a></li>
+                    <li><a href="#">셔츠/블라우스</a></li>
+                    <li><a href="#">니트/맨투맨/후드티티</a></li>
+                </ul>
+            </li>
+             <li><a href="#">Bottom</a>
+                <ul>
+                    <li><a href="#">롱팬츠</a></li>
+                    <li><a href="#">숏팬츠</a></li>
+                </ul>
+            </li>
+             <li><a href="#">Skirt/Dress</a>
+                <ul>
+                    <li><a href="#">스커트</a></li>
+                    <li><a href="#">원피스</a></li>
+                </ul>
+            </li>
+             <li><a href="#">Accessories</a>
+            </li>
+            <li><a href="#">Comunity</a>
+                <ul>
+                    <li><a href="#">Q&A</a></li>
+                    <li><a href="#">공지사항</a></li>
+                </ul>
+        </ul>
+    </nav>
+    <div class="section-title">NEW</div>
+    <div class="product-grid">
+        <div class="product">
+            <img src="imgs/outer1.png" alt="Product 1" >
+            <p>가디건</p>           
+        </div>
+          <div class="product">
+            <img src="imgs/outer2.png" alt="Product 2" >
+            <p>트위드</p>           
+        </div>
+          <div class="product">
+            <img src="imgs/skirt.png" alt="Product 3">
+            <p>미니스커트</p>           
+        </div>
+    </div>
+    <div class="section-title">BEST</div>
+        <div class="product-grid">
+            <div class="product">
+                <img src="imgs/top1.png" alt="Product 4" >       
+                <p>셔츠</p>           
+            </div>
+            <div class="product">
+                <img src="imgs/top2.png" alt="Product 5">
+                <p>셔츠</p>           
+            </div>
+            <div class="product">
+                <img src="imgs/bottom.png" alt="Product 6">
+                <p>데님</p>           
+            </div>
+        </div>
+
+<footer style="background:whitesmoke; padding: 20px; text-align: center;">
+  <p><strong>Fashion Shop</strong> | 대표: 홍길동 | 사업자등록번호: 123-45-67890</p>
+  <p>서울특별시 강남구 역삼동 123-4 | 고객센터: 02-1234-5678</p>
+  <p>&copy; 2025 Fashion Shop. All rights reserved.</p>
+</footer>    
+</body>
+</html>
