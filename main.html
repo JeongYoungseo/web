@@ -2,9 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="user-scalable=no initial-scale=1,maximum-scale=1">
     <title>MainPage</title>
     <style>
+        @media screen and (max-width: 767px) {
+            body {
+                font-size: 14px;
+            }
+            .logo {
+                width: 120px;
+                height: 80px;
+            }
+            .top-banner img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        @media screen and (min-width: 768px) and (max-width: 959px) {
+            body {
+                font-size: 16px;
+            }
+            .logo {
+                width: 160px;
+                height: 100px;
+            }
+            .top-banner img {
+                width: 400px;
+                height: 450px;
+            }
+        @media screen and (min-width: 960px) {
+             body {
+                font-size: 18px;
+            }
+            .logo {
+                width: 200px;
+                height: 120px;
+                }
+            .top-banner img {
+                width: 500px;
+                height: 550px;
+                }
+                
+            }
+        }
         *{ margin: 0; 
             padding: 0; 
             box-sizing: border-box;
@@ -103,7 +143,7 @@
 
     .product img {
       width: 100%;
-      height: auto;
+      height: 250px;
       border: 1px solid #ddd;
     }
 
@@ -113,6 +153,19 @@
       text-align: center;
       padding: 20px;
     } 
+    .top-banner {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+    .top-banner img{
+        width: 400px;
+        height: 450px;
+        object-fit: cover;
+    }
+
     </style>
 </head>
 <body>
@@ -162,6 +215,11 @@
                 </ul>
         </ul>
     </nav>
+    <div class="top-banner">
+        <img src="imgs/outer1.png" alt="배너1">
+        <img src="imgs/bottom.png" alt="배너2">
+        <img src="imgs/top1.png" alt="배너3">        
+    </div>
     <div class="section-title">NEW</div>
     <div class="product-grid">
         <div class="product">
