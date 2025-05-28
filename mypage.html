@@ -3,9 +3,265 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>mypage</title>
+    <style>
+        @media screen and (max-width: 767px) {
+            body {
+                font-size: 14px;
+            }
+            .logo {
+                width: 120px;
+                height: 80px;
+            }
+            .top-banner img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        @media screen and (min-width: 768px) and (max-width: 959px) {
+            body {
+                font-size: 16px;
+            }
+            .logo {
+                width: 160px;
+                height: 100px;
+            }
+            .top-banner img {
+                width: 400px;
+                height: 450px;
+            }
+        @media screen and (min-width: 960px) {
+             body {
+                font-size: 18px;
+            }
+            .logo {
+                width: 200px;
+                height: 120px;
+                }
+            .top-banner img {
+                width: 500px;
+                height: 550px;
+                }
+                
+            }
+        }
+        *{ margin: 0; 
+            padding: 0; 
+            box-sizing: border-box;
+        }
+        body{ 
+            font-family: Arial,sans-serif;
+        }
+        a{ 
+            text-decoration: none; 
+            color: black;
+        }
+        ul{ 
+            list-style: none;
+        }
+
+        header{    
+            background-color: white;
+            padding: 40px 20px 20px 20px;
+            text-align: center;
+        }
+        .logo{
+        width: 160px; 
+        height: 100px;
+        background-color:antiquewhite; 
+        margin: 0 auto; 
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        .right-menu{
+            display: flex;
+            justify-self: flex-end;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            padding-right: 20px;
+        }
+        .right-menu img{
+            vertical-align: middle;
+        }
+        nav{
+            background-color: bisque;
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        nav ul li{
+            position: relative;
+        }
+        nav ul li a{
+            padding: 14px 20px;
+            display: block;
+        }
+        nav ul li:hover{
+            background-color: #555;
+        }
+           nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 48px;
+      left: 0;
+      background: #444;
+      min-width: 160px;
+      flex-direction: column;
+      z-index: 1;
+    }
+
+    nav ul li:hover ul {
+      display: flex;
+    }
+
+    footer {
+      margin-top: 50px;
+      background: #f1f1f1;
+      text-align: center;
+      padding: 20px;
+    } 
+    .mypage {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+    }
+
+    .mypage-title {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+    }
+
+    .mypage-welcome {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 30px;
+    text-align: center;  
+    line-height: 250px;
+    }
+
+    .mypage-welcome .box {
+        width: 100%;
+        max-width: 420px;
+        height: 100%;
+        min-height: 300px;
+        text-align: center;
+        padding: 20px;  
+        background-color: #f3f3f3;
+        
+    }
+
+    .mypage-menu {
+        width: 100%;
+        max-width: 900px;
+        height: 100%;
+        min-height: 900px;
+        text-align: left;
+        margin: 0 auto ;
+        padding: 20px;  
+    }
+
+    .mypage-menu li {
+    border: 1px solid #ccc;
+    padding: 30px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    text-align: left;
+    
+    }
+
+    .mypage-menu li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    }
+    </style>
 </head>
 <body>
-    
+    <header>
+       <div class="logo">
+            <a href="main.html" style="text-decoration: none; color: inherit;">
+                <h1>Shop</h1>
+            </a>                       
+        </div>
+        <div class="right-menu">
+        <a href="login.html"><img src="imgs/icons8-login-48.png" alt="로그인" width="20"></a>&nbsp;
+        <a href="cart.html"><img src="imgs/icons8-cart-24.png" alt="장바구니" width="20"></a>&nbsp;
+        <a href="mypage.html"><img src="imgs/icons8-user-24.png" alt="마이페이지" width="20"></a>&nbsp;      
+    </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Outer</a>
+                <ul>
+                    <li><a href="#">패딩/코트</a></li>
+                    <li><a href="#">가디건/자켓</a></li>
+                </ul>
+            </li>
+             <li><a href="#">Top</a>
+                <ul>
+                    <li><a href="#">티셔츠</a></li>
+                    <li><a href="#">셔츠/블라우스</a></li>
+                    <li><a href="#">니트/맨투맨/후드티티</a></li>
+                </ul>
+            </li>
+             <li><a href="#">Bottom</a>
+                <ul>
+                    <li><a href="#">롱팬츠</a></li>
+                    <li><a href="#">숏팬츠</a></li>
+                </ul>
+            </li>
+             <li><a href="#">Skirt/Dress</a>
+                <ul>
+                    <li><a href="#">스커트</a></li>
+                    <li><a href="#">원피스</a></li>
+                </ul>
+            </li>
+             <li><a href="#">Accessories</a>
+            </li>
+            <li><a href="#">Comunity</a>
+                <ul>
+                    <li><a href="#">Q&A</a></li>
+                    <li><a href="#">공지사항</a></li>
+                </ul>
+        </ul>
+    </nav>
+    <main class="mypage">
+    <h2 class="mypage-title">MyPage</h2>
+
+    <div class="mypage-welcome">
+        <div class="box">○○○님 환영합니다!</div>
+        <div class="box">○○○원 구매 시 10% 할인</div>
+    </div>
+
+    <ul class="mypage-menu">
+        <li><a href="#">주문내역</a></li>
+        <li><a href="#">회원정보</a></li>
+        <li><a href="#">비밀번호 변경</a></li>
+        <li><a href="#">배송정보</a></li>
+        <li><a href="#">관심상품</a></li>
+        <li><a href="#">로그아웃</a></li>
+        <li><a href="#">회원탈퇴</a></li>
+        <li><a href="#">공지사항</a></li>
+        
+        
+    </ul>
+    </main>
+    <footer style="background:whitesmoke; padding: 20px; margin-top:450px; text-align:center;">
+        <p><strong>Fashion Shop</strong> | 대표: 홍길동 | 사업자등록번호: 123-45-67890</p>
+        <p>서울특별시 강남구 역삼동 123-4 | 고객센터: 02-1234-5678</p>
+        <p>&copy; 2025 Fashion Shop. All rights reserved.</p>
+    </footer>  
 </body>
 </html>
