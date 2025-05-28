@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detailpage</title>
+    <style>
+        @media screen and (min-width: 900px) {
+            body {
+                font-size: 14px;
+            }
+            .logo {
+                width: 120px;
+                height: 80px;
+            }
+        }
+        @media screen and (min-width: 768px) and (max-width: 959px) {
+            body {
+                font-size: 16px;
+            }
+            .logo {
+                width: 160px;
+                height: 100px;
+            }
+        }
+        @media screen and (min-width: 960px) {
+            body {
+                font-size: 18px;
+            }
+            .logo {
+                width: 200px;
+                height: 120px;
+            }
+            h2{
+                font-size: 24px;
+                margin: auto;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .item{
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .item img {
+                margin-bottom: 10px;
+            }            
+        }
+        @media screen and (max-width: 768px) {
+            .detail{
+                flex-direction: column;
+                align-items: center;
+            }
+            .img {
+                max-width: 100%;
+
+            }
+            .description img {
+                width: 100%;
+            }
+
+        }
+    *{ margin: 0; 
+            padding: 0; 
+            box-sizing: border-box;
+        }
+        body{ 
+            font-family: Arial,sans-serif;
+        }
+        a{ 
+            text-decoration: none; 
+            color: black;
+        }
+        ul{ 
+            list-style: none;
+        }
+
+        header{    
+            background-color: white;
+            padding: 40px 20px 20px 20px;
+            text-align: center;
+        }
+        .logo{
+        width: 160px; 
+        height: 100px;
+        background-color:antiquewhite; 
+        margin: 0 auto; 
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        .right-menu{
+            display: flex;
+            justify-self: flex-end;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            padding-right: 20px;
+        }
+        .right-menu img{
+            vertical-align: middle;
+        }
+        nav{
+            background-color: bisque;
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            flex-wrap: wrap;
+        }
+        nav ul li{
+            position: relative;
+        }
+        nav ul li a{
+            padding: 14px 20px;
+            display: block;
+        }
+        nav ul li:hover{
+            background-color: #555;
+        }
+           nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 48px;
+      left: 0;
+      background: #444;
+      min-width: 160px;
+      flex-direction: column;
+      z-index: 1;
+    }
+    nav ul li:hover ul {
+      display: flex;
+    }
+     .footer {
+      margin-top: 50px;
+      background: #f1f1f1;
+      text-align: center;
+      padding: 20px;
+     }
+    .detail {
+        display: flex;
+        align-items: flex-start;
+        margin: 40px auto;
+        max-width: 1000px;
+        gap: 30px;
+        padding: 0 20px;
+    }
+    .img {
+        width: 60%;
+        height: auto;
+    } 
+    .img img {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+    }
+    .info {
+        flex: 1;
+
+    }
+    .taps {
+        display: flex;
+        justify-content: center;
+        margin: 30px auto;
+        max-width: 1000px;
+    }
+    .tabs div {
+        padding: 15px;
+        text-align: center;
+        cursor: pointer;
+        flex: 1;
+        cursor: pointer;
+    }
+    .tabs div.active {
+        font-weight: bold;
+        border-bottom: 3px solid #000;
+    }
+    .description {
+        max-width: 1000px;
+        margin: 50px auto;
+        background: #f9f9f9;
+        padding: 30px;
+        text-align: center;
+    }
+    .description img {
+        width: 50%;
+        max-width: 400px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    </style>
+</head>
+<body>
+     <header>
+        <div class="logo">
+            <a href="main.html" style="text-decoration: none; color: inherit;">
+                <h1>Shop</h1>
+            </a>                       
+        </div>
+        <div class="right-menu">
+        <a href="login.html"><img src="imgs/icons8-login-48.png" alt="로그인" width="20"></a>&nbsp;
+        <a href="cart.html"><img src="imgs/icons8-cart-24.png" alt="장바구니" width="20"></a>&nbsp;
+        <a href="mypage.html"><img src="imgs/icons8-user-24.png" alt="마이페이지" width="20"></a>&nbsp;      
+    </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Outer</a>
+                <ul>
+                    <li><a href="#">패딩/코트</a></li>
+                    <li><a href="#">가디건/자켓</a></li>
+                </ul>
+            </li>
+             <li><a href="#">Top</a>
+                <ul>
+                    <li><a href="#">티셔츠</a></li>
+                    <li><a href="#">셔츠/블라우스</a></li>
+                    <li><a href="#">니트/맨투맨/후드티</a></li>
+                </ul>
+            </li>
+             <li><a href="#">Bottom</a>
+                <ul>
+                    <li><a href="#">롱팬츠</a></li>
+                    <li><a href="#">숏팬츠</a></li>
+                </ul>
+            </li>
+             <li><a href="#">Skirt/Dress</a>
+                <ul>
+                    <li><a href="#">스커트</a></li>
+                    <li><a href="#">원피스</a></li>
+                </ul>
+            </li>
+             <li><a href="#">Accessories</a>
+            </li>
+            <li><a href="#">Comunity</a>
+                <ul>
+                    <li><a href="#">Q&A</a></li>
+                    <li><a href="#">공지사항</a></li>
+                </ul>
+        </ul>
+    </nav>
+    <div class="detail">
+        <div class="img"></div>
+        <div class="info">
+            <img src="imgs/bottom.png" alt="pants" style="width: 60%";>
+            <h2>상품명:롱데님팬츠</h2>
+            <p>가격:15000원</p>
+            <button>Cart</button>
+            <button>Buy it now</button>
+        </div>
+    </div>
+    <div class="taps">
+        <div class="active">상세설명</div> 
+        <div>review</div>
+    </div>
+    <div class="description">
+        <img src="imgs/bottom.png" alt="이미지디테일" style="width: 50%">
+        <p>롱데님팬츠는 편안한 착용감과 세련된 디자인을 자랑합니다. 다양한 스타일에 어울리며, 데일리 룩에 적합합니다.</p>
+        <p>탄탄하고 신축성 좋은 히든 밴당으로 제작되어 오랫동안 착용하셔도 편안합니다.</p>    
+        <p>다리라인을 여유있게 커버해 주면서 군더더기 없이 와이드하게 떨어지는 핏으로 체형 구애 없이 모두가 만족하는 데님입니다. </p>
+        <p>활용도면에서도, 소장가치를 따져도 아쉬움 없는 와이드 팬츠라 개인적으로 정말 추천하는 아이템입니다!</p>
+    </div>
+    <footer style="background:whitesmoke; padding: 20px; margin-top:450px ; text-align: center;">
+        <p><strong>Fashion Shop</strong> | 대표: 홍길동 | 사업자등록번호: 123-45-67890</p>
+        <p>서울특별시 강남구 역삼동 123-4 | 고객센터: 02-1234-5678</p>
+        <p>&copy; 2025 Fashion Shop. All rights reserved.</p>
+    </footer>       
+</body>
+</html>
