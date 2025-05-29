@@ -146,44 +146,54 @@
         align-items: flex-start;
         margin: 40px auto;
         max-width: 1000px;
-        gap: 30px;
+        gap: 40px;
         padding: 0 20px;
     }
     .img {
-        width: 60%;
-        height: auto;
+        flex: 1;   
     } 
     .img img {
         width: 100%;
+        max-width: 600px;
         height: auto;
-        max-width: 400px;
     }
     .info {
-        flex: 1;
+        flex:1;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        
 
+    }
+    .info-content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 80px;
+        text-align: left;
     }
     .taps {
         display: flex;
-        justify-content: center;
-        margin: 30px auto;
-        max-width: 1000px;
+        justify-content: center;    
+        max-width: 500px;
+        margin: 20px auto;
+        border-bottom: 1px solid #ccc;
+        
     }
-    .tabs div {
-        padding: 15px;
+    .tab {
+        flex:1;
+        padding:15px 0;
         text-align: center;
-        cursor: pointer;
-        flex: 1;
-        cursor: pointer;
-    }
-    .tabs div.active {
         font-weight: bold;
-        border-bottom: 3px solid #000;
+        border-right: 1px solid #ccc;
+        font-size: 20px;
+        cursor: default;
     }
     .description {
         max-width: 1000px;
-        margin: 50px auto;
+        margin: 45px auto 60px;
         background: #f9f9f9;
-        padding: 30px;
+        padding: 60px;
         text-align: center;
     }
     .description img {
@@ -244,30 +254,52 @@
         </ul>
     </nav>
     <div class="detail">
-        <div class="img"></div>
+        <div class="img">
+             <img src="imgs/bottom.png" alt="상품이미지">
+        </div>      
         <div class="info">
-            <img src="imgs/bottom.png" alt="pants" style="width: 60%";>
+            <div class="info-content" > 
             <h2>상품명:롱데님팬츠</h2>
-            <p>가격:15000원</p>
-            <button>Cart</button>
-            <button>Buy it now</button>
+            <h2>가격:15000원</h2><br>
+            <button style="width:200px; height: 70px; font-size: 20px;"><a href="cart.html"></a>Cart</button>
+            <button style="width:200px; height: 70px; font-size: 20px;">Buy it now</button>
+            </div>
         </div>
     </div>
-    <div class="taps">
-        <div class="active">상세설명</div> 
-        <div>review</div>
-    </div>
+    <h2 style="text-align: center; font-size: 50px;">상품설명</h2>
+    <div class="tabs" style="text-align: center; font-size: 30px;">
+        <span>상세설명</span>
+        <span>|</span>
+        <span>review</span>
+    </div><br>
+
     <div class="description">
-        <img src="imgs/bottom.png" alt="이미지디테일" style="width: 50%">
+        <img src="imgs/bottom.png" alt="이미지디테일">
         <p>롱데님팬츠는 편안한 착용감과 세련된 디자인을 자랑합니다. 다양한 스타일에 어울리며, 데일리 룩에 적합합니다.</p>
         <p>탄탄하고 신축성 좋은 히든 밴당으로 제작되어 오랫동안 착용하셔도 편안합니다.</p>    
         <p>다리라인을 여유있게 커버해 주면서 군더더기 없이 와이드하게 떨어지는 핏으로 체형 구애 없이 모두가 만족하는 데님입니다. </p>
         <p>활용도면에서도, 소장가치를 따져도 아쉬움 없는 와이드 팬츠라 개인적으로 정말 추천하는 아이템입니다!</p>
+        <br><br>
+        <img src="imgs/bottom1-1.png" alt="디테일">
+        <p>후들후들 얇고 가벼운 코튼 소재</p>
+        <p>다양한 체형을 모두 만족시킬 사이즈</p>
+        <p>데일리하게 입기 좋은 컬러</p>
+        <p>롱데님팬츠는 후들후들 얇고 가벼운 코튼 소재로 제작되어 여름에도 시원하게 착용할 수 있습니다.</p>
+        <p>여름에도 시원하게 착용할 수 있는 얇은 코튼 소재로 제작되어 통기성이 좋습니다.</p>
+        <br><br> 
+        <img src="imgs/bottom1-2.png" alt="디테일2">  
+        <p>롱데님팬츠는 다양한 체형을 모두 만족시킬 수 있는 사이즈로 제공됩니다. 허리 사이즈는 26인치부터 36인치까지 선택할 수 있으며, 길이는 롱 스타일로 제작되어 다리 라인을 길어 보이게 해줍니다.</p>
+        <p>슬라이딩이 편한 YKK지퍼</p>
+        <p>안정되고 편안한 착용감 허리밴딩</p>
+        <p>백라인까지 멋스러움을 살려줄 가죽라벨</p>
+        <p>이번 재고 끝나면 추가수량 없습니다!</p>
+        <p>품절되기 전에 얼른 구매하세요!</p>
     </div>
+  
     <footer style="background:whitesmoke; padding: 20px; margin-top:450px ; text-align: center;">
         <p><strong>Fashion Shop</strong> | 대표: 홍길동 | 사업자등록번호: 123-45-67890</p>
         <p>서울특별시 강남구 역삼동 123-4 | 고객센터: 02-1234-5678</p>
         <p>&copy; 2025 Fashion Shop. All rights reserved.</p>
-    </footer>       
+    </footer>          
 </body>
 </html>
