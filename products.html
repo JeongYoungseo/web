@@ -118,6 +118,23 @@
       text-align: center;
       padding: 20px;
      }
+     .grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap:40px;
+        max-width: 800px;
+        margin: 0 auto 100px;
+        text-align: center;
+     }
+     .product img{
+        width:100%;
+        max-width: 300px;
+        height: 350px;
+        background-color: #ddd;
+     }
+     .product p{
+        margin: 10px 0;
+     }
     </style>
 </head>
 <body>
@@ -169,7 +186,36 @@
                 </ul>
         </ul>
     </nav> 
-    
+    <main>
+   <h2 style="text-align: center; margin-top: 40px;">Outer</h2>
+        <div style="text-align: center; margin-bottom: 30px;">
+            <span>패딩/코트</span>
+            <span>가디건/자켓</span>
+   </div>
+
+   <div class="grid">
+        <div class="product">
+            <img src="imgs/outer1.png" alt="outer1">
+                <p>상품명:반팔가디건</p>
+                <p>가격:20,000원</p>
+        </div>
+        <div class="product">
+            <img src="imgs/outer2.png" alt="outer2">
+                <p>상품명:트위드</p>
+                <p>가격:30,000원</p>
+        </div>
+        <div class="product">
+            <img src="imgs/outer3.png" alt="outer3">
+                <p>상품명:긴팔가디건</p>
+                <p>가격:25,000원</p>
+        </div>
+        <div class="product">
+            <img src="imgs/outer4.png" alt="outer4">
+                <p>상품명:패딩</p>
+                <p>가격:50,000원원</p>
+            </div>   
+         </div>
+    </main>
      <footer style="background:whitesmoke; padding: 20px; margin-top:450px ; text-align: center;">
         <p><strong>Fashion Shop</strong> | 대표: 홍길동 | 사업자등록번호: 123-45-67890</p>
         <p>서울특별시 강남구 역삼동 123-4 | 고객센터: 02-1234-5678</p>
