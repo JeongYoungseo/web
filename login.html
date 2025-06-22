@@ -4,6 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>loginpage</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+       document.addEventListener('DOMContentLoaded', () => {
+        let loginForm = document.querySelector('.login-box');
+        loginForm.addEventListener('submit', function (e) {
+            let inputs = loginForm.querySelectorAll('input');
+            let empty = false;
+            for (let input of inputs) {
+                if (input.type !== 'submit' && input.value.trim() === '') {
+                    empty = true;
+                }
+            }
+              if (empty) {
+            alert('아이디와 비밀번호를 모두 입력해주세요.');
+            e.preventDefault(); // 제출 막음
+            } else {
+                alert('로그인이 완료되었습니다.');
+                // 실제 서버와 연결되는 로직이 없기 때문에 그냥 알림만 뜨고 새로고침됨
+            }
+        });
+    });
+        $(document).ready(function () {
+            $('.login-box').hover(
+                function () {
+                    $(this).css('border-color', 'orange');
+                },
+                function () {
+                    $(this).css('border-color', '#ccc');
+                }
+            );
+        });
+
+    </script>
     <style>
         @media screen and (min-width: 900px) {
             body {

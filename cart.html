@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cartpage</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        function handlePurchase() {
+            alert("구매창으로 이동합니다.");
+        }
+
+        $(document).ready(function() {
+          $(".total").css("background-color", "#ffe0b2");
+        })
+    </script>
     <style>
          @media screen and (min-width: 900px) {
             body {
@@ -238,7 +248,7 @@
         <div class="total">
             <p>총 금액: 65,000원</p>
         </div>
-        <button class="btn">상품구매</button>
+        <button class="btn" onclick="handlePurchase()">상품구매</button>
 
     </section>
      <footer style="background:whitesmoke; padding: 20px; margin-top:450px ; text-align: center;">

@@ -4,6 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>product</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        let products = document.querySelectorAll(".product");
+        products.forEach((item) => {
+            item.addEventListener("click", () => {
+                alert("해당 상품의 상세 페이지로 이동합니다.");
+            });
+        });
+    });
+
+    $(document).ready(function () {
+        $(".product img").hover(
+            function () {
+                $(this).css("border", "3px solid black");
+            },
+            function () {
+                $(this).css("border", "none");
+            }
+        );
+    });
+    </script>
     <style>
                 @media screen and (min-width: 900px) {
             body {

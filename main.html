@@ -4,6 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="user-scalable=no initial-scale=1,maximum-scale=1">
     <title>MainPage</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+    window.onload = function () {
+    let navItems = document.querySelectorAll("nav ul li");
+
+    for (let i = 0; i < navItems.length; i++) {
+        let item = navItems[i];
+
+        item.addEventListener("mouseover", function () {
+        let submenu = item.querySelector("ul");
+        if (submenu) submenu.style.display = "flex";
+        });
+
+        item.addEventListener("mouseout", function () {
+        let submenu = item.querySelector("ul");
+        if (submenu) submenu.style.display = "none";
+        });
+    }
+    };
+
+    $(document).ready(function(){
+        $("nav ul li").hover(
+            function(){
+                $(this).children("ul").stop().slideDown(150);
+            },
+            function(){
+                $(this).children("ul").stop().slideUp(150);
+            }
+        );
+    });
+    </script>
     <style>
         @media screen and (max-width: 767px) {
             body {
@@ -103,22 +134,23 @@
             display: block;
         }
         nav ul li:hover{
-            background-color: #555;
+            background-color: #b8b8b8;
         }
            nav ul li ul {
       display: none;
       position: absolute;
-      top: 48px;
+      top: 100%;
       left: 0;
       background: #444;
+      z-index: 999;
       min-width: 160px;
       flex-direction: column;
-      z-index: 1;
+     
     }
 
-    nav ul li:hover ul {
+    /* nav ul li:hover ul {
       display: flex;
-    }
+    } */
 
     .section-title {
       margin: 30px 0 10px;
@@ -181,7 +213,7 @@
     </header>
     <nav>
         <ul>
-            <li><a href="#">Outer</a>
+            <li><a href="products.html">Outer</a>
                 <ul>
                     <li><a href="#">패딩/코트</a></li>
                     <li><a href="#">가디건/자켓</a></li>

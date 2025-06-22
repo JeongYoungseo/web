@@ -4,6 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>signupage</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            let form = document.querySelector('.signup-box');
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault(); 
+                let inputs = form.querySelectorAll('input[type="text"], input[type="password"]');
+                let isEmpty = false;
+
+                for (let i = 0; i < inputs.length; i++) {
+                    if (inputs[i].value.trim() === '') {
+                        isEmpty = true;
+                        break;
+                    }
+                }
+
+                if (isEmpty) {
+                    alert('모든 항목을 입력해주세요.');
+                } else {
+                    alert('회원가입이 완료되었습니다!'); 
+                    
+                }
+            });
+        });
+    $(document).ready(function(){
+        $('.signup-box input').focus(function(){
+            $(this).css('background-color', '#eef');
+        }).blur(function(){
+            $(this).css('background-color', '');
+        });
+    });
+</script>
      <style>
         @media screen and (min-width: 900px) {
             body {

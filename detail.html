@@ -4,6 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>detailpage</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+    $(document).ready(function () {
+        let detailTab = $(".tab-detail");
+        let reviewTab = $(".tab-review");
+
+        
+        detailTab.on("click", function () {
+        $(".detail-tab").show();         
+        $(".review-tab").hide();         
+        detailTab.addClass("active");    
+        reviewTab.removeClass("active");
+        });
+
+    
+        reviewTab.on("click", function () {
+        $(".detail-tab").hide();         
+        $(".review-tab").show();        
+        reviewTab.addClass("active");
+        detailTab.removeClass("active");
+        });
+    });
+
+        document.addEventListener("DOMContentLoaded", function () {
+        let image = document.querySelector(".img img");
+
+        image.addEventListener("click", function () {
+            if (image.style.transform === "scale(1.5)") {
+                image.style.transform = "scale(1)";
+            } else {
+                image.style.transform = "scale(1.5)";
+            }
+            image.style.transition = "transform 0.3s ease";
+        });
+    });
+    </script>
     <style>
         @media screen and (min-width: 900px) {
             body {
@@ -268,12 +304,12 @@
     </div>
     <h2 style="text-align: center; font-size: 50px;">상품설명</h2>
     <div class="tabs" style="text-align: center; font-size: 30px;">
-        <span>상세설명</span>
+        <span class="tab-detail active" style="cursor: pointer;">상세설명</span>
         <span>|</span>
-        <span>review</span>
+        <span class="tab-review" style="cursor: pointer;">review</span>
     </div><br>
 
-    <div class="description">
+    <div class="description detail-tab">
         <img src="imgs/bottom.png" alt="이미지디테일">
         <p>롱데님팬츠는 편안한 착용감과 세련된 디자인을 자랑합니다. 다양한 스타일에 어울리며, 데일리 룩에 적합합니다.</p>
         <p>탄탄하고 신축성 좋은 히든 밴당으로 제작되어 오랫동안 착용하셔도 편안합니다.</p>    
@@ -294,6 +330,13 @@
         <p>백라인까지 멋스러움을 살려줄 가죽라벨</p>
         <p>이번 재고 끝나면 추가수량 없습니다!</p>
         <p>품절되기 전에 얼른 구매하세요!</p>
+    </div>
+
+    <div class="description review-tab">
+        <h3>리뷰</h3>
+        <p>★★★★★ 아주 좋아요!</p>
+        <p>★★★★☆ 예쁘고 편해요!</p>
+        <p>★★★☆☆ 보통이에요~</p>
     </div>
   
     <footer style="background:whitesmoke; padding: 20px; margin-top:450px ; text-align: center;">

@@ -4,6 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mypage</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        let menuItems = document.querySelectorAll(".mypage-menu li");
+
+        menuItems.forEach((item) => {
+            if (item.textContent.trim() === "로그아웃") {
+                item.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    let confirmLogout = confirm("정말 로그아웃 하시겠습니까?");
+                    if (confirmLogout) {
+                        alert("로그아웃 되었습니다.");
+                    }
+                });
+            }
+        });
+        $(".mypage-menu li").each(function () {
+            if ($(this).text().trim() === "회원탈퇴") {
+                $(this).on("click", function (e) {
+                    e.preventDefault();
+                    $(".mypage").fadeOut();
+                });
+            }
+        });
+    });
+    </script>
     <style>
         @media screen and (max-width: 767px) {
             body {
