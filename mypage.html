@@ -24,6 +24,7 @@
             if ($(this).text().trim() === "회원탈퇴") {
                 $(this).on("click", function (e) {
                     e.preventDefault();
+                    let confirmCancellation = confirm("정말 탈퇴 하시겠습니까?")
                     $(".mypage").fadeOut();
                 });
             }
